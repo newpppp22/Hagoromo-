@@ -62,8 +62,8 @@ module.exports = {
       msg += `\n🫧𝘽𝙊𝙏 𝙉𝘼𝙈𝙀🫧:🌊𝙼𝚊𝚔𝚒𝚖𝚊 𝙱𝚋𝚢🥰`;
       msg += `\n🔹 𝘽𝙊𝙏 𝙊𝙒𝙉𝙀𝙍 🔹`;
       msg += `\n 	 					`;
-      msg += `\n~𝙉𝘼𝙈𝙀:✰ Amit Max ⚡`;
-      msg += `\n~𝙁𝘽:https://www.facebook.com/share/166VHaYd36/`;
+      msg += `\n~𝙉𝘼𝙈𝙀:✰ Amit Max ⚡✰`;
+      msg += `\n~𝙁𝘽:Set your fb `;
 
       await message.reply({
         body: msg,
@@ -119,4 +119,4 @@ function roleTextToString(roleText) {
     default:
       return "Unknown role";
   }
-       }
+          }
