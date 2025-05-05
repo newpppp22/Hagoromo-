@@ -42,24 +42,26 @@ module.exports = {
     const videoUrl = "https://i.imgur.com/tLWu7FU.mp4";
     const videoPath = __dirname + "/owner_profile_video.mp4";
 
-    // ভিডিও ডাউনলোড
-    const res = await axios.get(videoUrl, { responseType: "arraybuffer" });
-    fs.writeFileSync(videoPath, Buffer.from(res.data, "utf-8"));
+    try {
+      const res = await axios.get(videoUrl, { responseType: "arraybuffer" });
+      fs.writeFileSync(videoPath, Buffer.from(res.data, "utf-8"));
 
-    // ভিডিও সহ মেসেজ পাঠানো
-    api.sendMessage({
-      body: profile,
-      attachment: fs.createReadStream(videoPath)
-    }, event.threadID, (err, info) => {
-      fs.unlinkSync(videoPath); // লোকাল ভিডিও ফাইল ডিলিট
-      
-      if (!err) {
-        // 40 সেকেন্ড পর মেসেজ অটো ডিলিট
-        setTimeout(() => {
-          api.unsendMessage(info.messageID);
-        }, 40000);
-      }
-    });
+      api.sendMessage({
+        body: profile,
+        attachment: fs.createReadStream(videoPath)
+      }, event.threadID, (err, info) => {
+        fs.unlinkSync(videoPath); // Delete local video file
+        if (!err) {
+          setTimeout(() => {
+            api.unsendMessage(info.messageID);
+          }, 25000); // Delete after 25 seconds
+        }
+      });
+
+    } catch (e) {
+      // If video can't be sent, send profile text only
+      api.sendMessage(profile, event.threadID);
+    }
   }
 };
 
