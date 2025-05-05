@@ -6,11 +6,11 @@ module.exports = {
 		countDown: 5,
 		role: 2,
 		shortDescription: {
-			vi: "",
+			vi: "go",
 			en: "kick 🦶 bot from gc by owner bot"
 		},
 		longDescription: {
-			vi: "",
+			vi: "jah",
 			en: "remove bot from group "
 		},
 		category: "owner",
