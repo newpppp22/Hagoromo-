@@ -1,4 +1,4 @@
-const header = `👑 Amit Max Vip Users 👑`;
+const header = `👑 Hagoromo Otustsuki Vip Users 👑`;
 
 const fs = require("fs");
 
