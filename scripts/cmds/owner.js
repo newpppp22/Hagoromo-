@@ -6,7 +6,7 @@ module.exports = {
   config: {
     name: "owner",
     aliases: ["info", "profile"],
-    author: "Amit Max ⚡",
+    author: "Hagoromo Otustsuki ",
     role: 0,
     shortDescription: "Show owner's profile with playable video",
     longDescription: "Displays profile info and sends a playable video directly.",
