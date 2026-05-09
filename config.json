@@ -1,7 +1,7 @@
 {
 	"facebookAccount": {
-		"email": "",
-		"password": "",
+		"email": "alphamr571@gmail.com",
+		"password": "kazushi123",
 		"2FASecret": "",
 		"i_user": "",
 		"proxy": null,
@@ -12,7 +12,7 @@
 	"antiInbox": false,
 	"language": "en",
 	"notesLanguage": "change to your language with ISO 639-1 code, available languages: vi (Vietnamese), en (English)",
-	"nickNameBot": "Mariya baby",
+	"nickNameBot": "Yumeko bbz",
 	"prefix": "*",
 	"adminOnly": {
 		"enable": false,
